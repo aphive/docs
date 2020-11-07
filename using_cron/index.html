@@ -1,0 +1,1309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Home of all Documentation for Aphive">
+      
+      
+      
+      <link rel="shortcut icon" href="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>Using Cron - Aphive Documentation Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>body,input{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="deep-orange">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-cron" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Aphive Documentation Hub" class="md-header-nav__button md-logo" aria-label="Aphive Documentation Hub">
+      
+  <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Aphive Documentation Hub
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Using Cron
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Aphive Documentation Hub" class="md-nav__button md-logo" aria-label="Aphive Documentation Hub">
+      
+  <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
+
+    </a>
+    Aphive Documentation Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Using Cron
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Using Cron
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cron" class="md-nav__link">
+    What is Cron?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    Crontab
+  </a>
+  
+    <nav class="md-nav" aria-label="Crontab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crontab-layout" class="md-nav__link">
+    Crontab Layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    Expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asterisk" class="md-nav__link">
+    Asterisk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comma" class="md-nav__link">
+    Comma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-values" class="md-nav__link">
+    Step Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-cron-file" class="md-nav__link">
+    Example Cron File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-overview" class="md-nav__link">
+    General Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="General Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cron-basics" class="md-nav__link">
+    Cron basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-all-cron-jobs-for-the-current-user" class="md-nav__link">
+    Remove all cron jobs for the current user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-the-jobs-for-the-current-user" class="md-nav__link">
+    List the jobs for the current user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-your-crontab-file" class="md-nav__link">
+    Edit your crontab file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-another-users-cron-jobs" class="md-nav__link">
+    Edit another user's cron jobs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-crontab-use" class="md-nav__link">
+    Example crontab use
+  </a>
+  
+    <nav class="md-nav" aria-label="Example crontab use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-15" class="md-nav__link">
+    At minute 15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-15th-minute" class="md-nav__link">
+    At every 15th minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-minute" class="md-nav__link">
+    At every minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-5th-minute" class="md-nav__link">
+    At every 5th minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-5-and-10" class="md-nav__link">
+    At minute 0, 5, and 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0" class="md-nav__link">
+    At minute 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-past-every-2nd-hour" class="md-nav__link">
+    At minute 0 past every 2nd hour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-23-past-every-2nd-hour-from-0-through-20" class="md-nav__link">
+    At minute 23 past every 2nd hour from 0 through 20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-0000-on-day-of-month-4-in-january-april-july-and-october" class="md-nav__link">
+    At 00:00 on day-of-month 4 in January, April, July, and October.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-0405-on-sunday" class="md-nav__link">
+    At 04:05 on Sunday
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-2200-on-every-day-of-week-from-monday-through-friday" class="md-nav__link">
+    At 22:00 on every day-of-week from Monday through Friday.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-23-past-every-2nd-hour-from-0-through-20_1" class="md-nav__link">
+    At minute 23 past every 2nd hour from 0 through 20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-past-hour-0-and-12-on-day-of-month-1-in-every-2nd-month" class="md-nav__link">
+    At minute 0 past hour 0 and 12 on day-of-month 1 in every 2nd month.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-standards" class="md-nav__link">
+    Non Standards
+  </a>
+  
+    <nav class="md-nav" aria-label="Non Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yearly-or-at-0000-on-day-of-month-1-in-january" class="md-nav__link">
+    Yearly or At 00:00 on day-of-month 1 in January
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-or-at-0000-on-day-of-month-1" class="md-nav__link">
+    Monthly or At 00:00 on day-of-month 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-or-at-0000-on-sunday" class="md-nav__link">
+    Weekly or At 00:00 on Sunday
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-or-at-0000" class="md-nav__link">
+    Daily or At 00:00
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hourly-or-at-minute-0" class="md-nav__link">
+    Hourly or At minute 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-rebooting" class="md-nav__link">
+    After rebooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_git/" class="md-nav__link">
+      Using Git
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_homebrew/" class="md-nav__link">
+      Using Homebrew
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_ssh_keys/" class="md-nav__link">
+      Using SSH Keys
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade_bash_on_mac/" class="md-nav__link">
+      Upgrade Bash on Mac
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      MkDocs
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="MkDocs" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        MkDocs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-mkdocs/" class="md-nav__link">
+      Using MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs_reference/" class="md-nav__link">
+      MkDocs Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../message_boxes/" class="md-nav__link">
+      MkDocs Message Boxes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cron" class="md-nav__link">
+    What is Cron?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    Crontab
+  </a>
+  
+    <nav class="md-nav" aria-label="Crontab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crontab-layout" class="md-nav__link">
+    Crontab Layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    Expressions
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asterisk" class="md-nav__link">
+    Asterisk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comma" class="md-nav__link">
+    Comma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    Round
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-values" class="md-nav__link">
+    Step Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-cron-file" class="md-nav__link">
+    Example Cron File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-overview" class="md-nav__link">
+    General Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="General Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cron-basics" class="md-nav__link">
+    Cron basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-all-cron-jobs-for-the-current-user" class="md-nav__link">
+    Remove all cron jobs for the current user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-the-jobs-for-the-current-user" class="md-nav__link">
+    List the jobs for the current user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-your-crontab-file" class="md-nav__link">
+    Edit your crontab file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-another-users-cron-jobs" class="md-nav__link">
+    Edit another user's cron jobs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-crontab-use" class="md-nav__link">
+    Example crontab use
+  </a>
+  
+    <nav class="md-nav" aria-label="Example crontab use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-15" class="md-nav__link">
+    At minute 15
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-15th-minute" class="md-nav__link">
+    At every 15th minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-minute" class="md-nav__link">
+    At every minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-every-5th-minute" class="md-nav__link">
+    At every 5th minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-5-and-10" class="md-nav__link">
+    At minute 0, 5, and 10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0" class="md-nav__link">
+    At minute 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-past-every-2nd-hour" class="md-nav__link">
+    At minute 0 past every 2nd hour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-23-past-every-2nd-hour-from-0-through-20" class="md-nav__link">
+    At minute 23 past every 2nd hour from 0 through 20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-0000-on-day-of-month-4-in-january-april-july-and-october" class="md-nav__link">
+    At 00:00 on day-of-month 4 in January, April, July, and October.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-0405-on-sunday" class="md-nav__link">
+    At 04:05 on Sunday
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-2200-on-every-day-of-week-from-monday-through-friday" class="md-nav__link">
+    At 22:00 on every day-of-week from Monday through Friday.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-23-past-every-2nd-hour-from-0-through-20_1" class="md-nav__link">
+    At minute 23 past every 2nd hour from 0 through 20
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-minute-0-past-hour-0-and-12-on-day-of-month-1-in-every-2nd-month" class="md-nav__link">
+    At minute 0 past hour 0 and 12 on day-of-month 1 in every 2nd month.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-standards" class="md-nav__link">
+    Non Standards
+  </a>
+  
+    <nav class="md-nav" aria-label="Non Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yearly-or-at-0000-on-day-of-month-1-in-january" class="md-nav__link">
+    Yearly or At 00:00 on day-of-month 1 in January
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-or-at-0000-on-day-of-month-1" class="md-nav__link">
+    Monthly or At 00:00 on day-of-month 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-or-at-0000-on-sunday" class="md-nav__link">
+    Weekly or At 00:00 on Sunday
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-or-at-0000" class="md-nav__link">
+    Daily or At 00:00
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hourly-or-at-minute-0" class="md-nav__link">
+    Hourly or At minute 0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-rebooting" class="md-nav__link">
+    After rebooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Using Cron</h1>
+                
+                <h2 id="what-is-cron">What is Cron?<a class="headerlink" href="#what-is-cron" title="Permanent link">&para;</a></h2>
+<p>Cron is a time based job scheduler in Unix-like Operating Systems. People who use and maintain software environments use cron to schedule jobs to run periodically at fixed times, dates, or intervals.</p>
+<p>Cron is driven by a crontab (cron table) file that specifies shell commands to run periodically on the given schedules. Crontab files normally reside in the same location as the cron daemon. Individuaals can choose to have their own crontab files. These normally reside in the <code>/etc</code> directory.</p>
+<h2 id="crontab">Crontab<a class="headerlink" href="#crontab" title="Permanent link">&para;</a></h2>
+<p>A crontab file contains instructions for the cron daemon in the form of <em>"run this command at this time on this date"</em>. Each user has their own crontab, and commands in any given crontab will be executed as the user who owns the crontab.</p>
+<h3 id="crontab-layout">Crontab Layout<a class="headerlink" href="#crontab-layout" title="Permanent link">&para;</a></h3>
+<p>Each line of a crontab file represents a job, and looks like this:
+<div class="highlight"><pre><span></span><code>+------------------- minute (0-59)
+|  +---------------- hour (0-23)
+|  |  +------------- day of month (1-31)
+|  |  |  +---------- month (1-12)
+|  |  |  |  +------- day of week (0-6) (Sunday to Saturday)
+|  |  |  |  |
+|  |  |  |  |
+*  *  *  *  *  command_to_execute
+</code></pre></div></p>
+<h3 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Allowed Values</th>
+<th>Allowed Special Characters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minutes</td>
+<td>Yes</td>
+<td>0-50</td>
+<td><code>*</code> , <code>,</code> , <code>-</code></td>
+</tr>
+<tr>
+<td>Hours</td>
+<td>Yes</td>
+<td>0-23</td>
+<td><code>*</code> , <code>,</code> , <code>-</code></td>
+</tr>
+<tr>
+<td>Day of Month</td>
+<td>Yes</td>
+<td>1-32</td>
+<td><code>*</code> , <code>,</code> , <code>-</code></td>
+</tr>
+<tr>
+<td>Month</td>
+<td>Yes</td>
+<td>1-12</td>
+<td><code>*</code> , <code>,</code> , <code>-</code></td>
+</tr>
+<tr>
+<td>Day of Week</td>
+<td>Yes</td>
+<td>0-6</td>
+<td><code>*</code> , <code>,</code> , <code>-</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="asterisk">Asterisk<a class="headerlink" href="#asterisk" title="Permanent link">&para;</a></h4>
+<p>The (<code>*</code>) character specifies all possible values for the field.</p>
+<p>Example: <code>10 * 1 1 *</code> will run the command at minute 10 every hour on the first day in January or <code>at 2021-01-01 00:10:00</code></p>
+<h4 id="comma">Comma<a class="headerlink" href="#comma" title="Permanent link">&para;</a></h4>
+<p>The (<code>,</code>) character defines a list.</p>
+<p>Example: <code>MON,WED,FRI</code> in the 5<sup>th</sup> field will tell the command to run on Mondays, Wednesdays and Fridays.</p>
+<h4 id="round">Round<a class="headerlink" href="#round" title="Permanent link">&para;</a></h4>
+<p>The (<code>#</code>) pound character defines a comment.</p>
+<p>Example: <code># This command does something somewhere.</code></p>
+<h4 id="step-values">Step Values<a class="headerlink" href="#step-values" title="Permanent link">&para;</a></h4>
+<p>Step values can be used in conjunction with ranges. Following a range with <code>/&lt;number&gt;</code> specifies skips of the number's value through the range.</p>
+<p>Example: <code>0-23/2</code> in the 2<sup>nd</sup> field denotes every other hour.</p>
+<h3 id="example-cron-file">Example Cron File<a class="headerlink" href="#example-cron-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run five minutes after midnight each day</span>
+<span class="m">5</span> <span class="m">0</span> * * * /path/to/script
+
+<span class="c1"># Run at 10pm on workdays and email John</span>
+<span class="m">0</span> <span class="m">22</span> * * <span class="m">1</span>-5 mail -s <span class="s2">&quot;Something Important&quot;</span> john
+
+<span class="c1"># Run this one as root</span>
+<span class="m">5</span> <span class="m">0</span> * * * root touch /tmp/file
+</code></pre></div>
+<h2 id="general-overview">General Overview<a class="headerlink" href="#general-overview" title="Permanent link">&para;</a></h2>
+<h3 id="cron-basics">Cron basics<a class="headerlink" href="#cron-basics" title="Permanent link">&para;</a></h3>
+<p>If this in your first time using cron, you will be prompted to choose an editor, the prompt will list your options and it will vary depending on which editor you have installed, for example:
+<div class="highlight"><pre><span></span><code>no crontab for user - using an empty one
+
+Select an editor. To change later, run &#39;select-editor&#39;.
+ 1. /bin/nano &lt;---- easiest
+ 2. /usr/bin/vim.basic
+ 3. /usr/bin/vim.tiny
+ 4. /bin/ed
+
+ Choose 1-4 [1]:
+</code></pre></div></p>
+<h3 id="remove-all-cron-jobs-for-the-current-user">Remove all cron jobs for the current user<a class="headerlink" href="#remove-all-cron-jobs-for-the-current-user" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>crontab -r
+</code></pre></div>
+<h3 id="list-the-jobs-for-the-current-user">List the jobs for the current user<a class="headerlink" href="#list-the-jobs-for-the-current-user" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>crontab -l
+</code></pre></div>
+<h3 id="edit-your-crontab-file">Edit your crontab file<a class="headerlink" href="#edit-your-crontab-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>crontab -e
+</code></pre></div>
+<h3 id="edit-another-users-cron-jobs">Edit another user's cron jobs<a class="headerlink" href="#edit-another-users-cron-jobs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>crontab -u username -e
+</code></pre></div>
+<h2 id="example-crontab-use">Example crontab use<a class="headerlink" href="#example-crontab-use" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There is a difference between running a command every <code>x [window]</code> vs running a command every <code>x&lt;sup&gt;th&lt;/sup&gt; [window]</code>.</p>
+<p>Example:  Every 15 minutes vs Every 15<sup>th</sup> minute.</p>
+</div>
+<h3 id="at-minute-15">At minute 15<a class="headerlink" href="#at-minute-15" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>15 * * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 22:15:00
+then at 2020-11-05 23:15:00
+then at 2020-11-06 00:15:00
+then at 2020-11-06 01:15:00
+then at 2020-11-06 02:15:00
+</code></pre></div></p>
+<h3 id="at-every-15th-minute">At every 15<sup>th</sup> minute<a class="headerlink" href="#at-every-15th-minute" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>*/15 * * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 21:30:00
+then at 2020-11-05 21:45:00
+then at 2020-11-05 22:00:00
+then at 2020-11-05 22:15:00
+then at 2020-11-05 22:30:00  
+</code></pre></div></p>
+<h3 id="at-every-minute">At every minute<a class="headerlink" href="#at-every-minute" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>* * * * *  &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 21:27:00
+then at 2020-11-05 21:28:00
+then at 2020-11-05 21:29:00
+then at 2020-11-05 21:30:00
+then at 2020-11-05 21:31:00  
+</code></pre></div></p>
+<h3 id="at-every-5th-minute">At every 5<sup>th</sup> minute<a class="headerlink" href="#at-every-5th-minute" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>*/5 * * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 21:30:00
+then at 2020-11-05 21:35:00
+then at 2020-11-05 21:40:00
+then at 2020-11-05 21:45:00
+then at 2020-11-05 21:50:00  
+</code></pre></div></p>
+<h3 id="at-minute-0-5-and-10">At minute 0, 5, and 10<a class="headerlink" href="#at-minute-0-5-and-10" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0,5,10 * * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 22:00:00
+then at 2020-11-05 22:05:00
+then at 2020-11-05 22:10:00
+then at 2020-11-05 23:00:00
+then at 2020-11-05 23:05:00
+</code></pre></div></p>
+<h3 id="at-minute-0">At minute 0<a class="headerlink" href="#at-minute-0" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0 * * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 22:00:00
+then at 2020-11-05 23:00:00
+then at 2020-11-06 00:00:00
+then at 2020-11-06 01:00:00
+then at 2020-11-06 02:00:00
+</code></pre></div></p>
+<h3 id="at-minute-0-past-every-2nd-hour">At minute 0 past every 2<sup>nd</sup> hour<a class="headerlink" href="#at-minute-0-past-every-2nd-hour" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0 */2 * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 22:00:00
+then at 2020-11-06 00:00:00
+then at 2020-11-06 02:00:00
+then at 2020-11-06 04:00:00
+then at 2020-11-06 06:00:00
+</code></pre></div></p>
+<h3 id="at-minute-23-past-every-2nd-hour-from-0-through-20">At minute 23 past every 2<sup>nd</sup> hour from 0 through 20<a class="headerlink" href="#at-minute-23-past-every-2nd-hour-from-0-through-20" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>23 0-20/2 * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-06 00:23:00
+then at 2020-11-06 02:23:00
+then at 2020-11-06 04:23:00
+then at 2020-11-06 06:23:00
+then at 2020-11-06 08:23:00
+</code></pre></div></p>
+<h3 id="at-0000-on-day-of-month-4-in-january-april-july-and-october">At 00:00 on day-of-month 4 in January, April, July, and October.<a class="headerlink" href="#at-0000-on-day-of-month-4-in-january-april-july-and-october" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0 0 4 1,4,7,10 * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2021-01-04 00:00:00
+then at 2021-04-04 00:00:00
+then at 2021-07-04 00:00:00
+then at 2021-10-04 00:00:00
+then at 2022-01-04 00:00:00
+</code></pre></div></p>
+<h3 id="at-0405-on-sunday">At 04:05 on Sunday<a class="headerlink" href="#at-0405-on-sunday" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>5 4 * * sun &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-08 04:05:00
+then at 2020-11-15 04:05:00
+then at 2020-11-22 04:05:00
+then at 2020-11-29 04:05:00
+then at 2020-01-05 04:05:00
+</code></pre></div></p>
+<h3 id="at-2200-on-every-day-of-week-from-monday-through-friday">At 22:00 on every day-of-week from Monday through Friday.<a class="headerlink" href="#at-2200-on-every-day-of-week-from-monday-through-friday" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0 22 * * 1-5 &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 22:00:00
+then at 2020-11-06 22:00:00
+then at 2020-11-09 22:00:00
+then at 2020-11-10 22:00:00
+then at 2020-11-11 22:00:00
+</code></pre></div></p>
+<h3 id="at-minute-23-past-every-2nd-hour-from-0-through-20_1">At minute 23 past every 2<sup>nd</sup> hour from 0 through 20<a class="headerlink" href="#at-minute-23-past-every-2nd-hour-from-0-through-20_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>23 0-20/2 * * * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-06 00:23:00
+then at 2020-11-06 02:23:00
+then at 2020-11-06 04:23:00
+then at 2020-11-06 06:23:00
+then at 2020-11-06 08:23:00
+</code></pre></div></p>
+<h3 id="at-minute-0-past-hour-0-and-12-on-day-of-month-1-in-every-2nd-month">At minute 0 past hour 0 and 12 on day-of-month 1 in every 2<sup>nd</sup> month.<a class="headerlink" href="#at-minute-0-past-hour-0-and-12-on-day-of-month-1-in-every-2nd-month" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>0 0,12 1 */2 * &lt;command-to-execute&gt;
+</code></pre></div>
+Would produce:
+<div class="highlight"><pre><span></span><code>next at 2021-01-01 00:00:00
+then at 2021-01-01 12:00:00
+then at 2021-03-01 00:00:00
+then at 2021-03-01 12:00:00
+then at 2021-05-01 00:00:00
+</code></pre></div></p>
+<h2 id="non-standards">Non Standards<a class="headerlink" href="#non-standards" title="Permanent link">&para;</a></h2>
+<h3 id="yearly-or-at-0000-on-day-of-month-1-in-january">Yearly or At 00:00 on day-of-month 1 in January<a class="headerlink" href="#yearly-or-at-0000-on-day-of-month-1-in-january" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>@yearly &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2021-01-01 00:00:00
+then at 2022-01-01 00:00:00
+then at 2023-01-01 00:00:00
+then at 2024-01-01 00:00:00
+then at 2025-01-01 00:00:00
+</code></pre></div></p>
+<h3 id="monthly-or-at-0000-on-day-of-month-1">Monthly or At 00:00 on day-of-month 1<a class="headerlink" href="#monthly-or-at-0000-on-day-of-month-1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>@monthly &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-01 00:00:00
+then at 2021-01-01 00:00:00
+then at 2021-02-01 00:00:00
+then at 2021-03-01 00:00:00
+then at 2021-04-01 00:00:00
+</code></pre></div></p>
+<h3 id="weekly-or-at-0000-on-sunday">Weekly or At 00:00 on Sunday<a class="headerlink" href="#weekly-or-at-0000-on-sunday" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>@weekly &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-08 00:00:00
+then at 2020-11-15 00:00:00
+then at 2020-11-22 00:00:00
+then at 2020-11-29 00:00:00
+then at 2020-11-06 00:00:00
+</code></pre></div></p>
+<h3 id="daily-or-at-0000">Daily or At 00:00<a class="headerlink" href="#daily-or-at-0000" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>@daily &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-06 00:00:00
+then at 2020-11-07 00:00:00
+then at 2020-11-08 00:00:00
+then at 2020-11-09 00:00:00
+then at 2020-11-10 00:00:00
+</code></pre></div></p>
+<h3 id="hourly-or-at-minute-0">Hourly or At minute 0<a class="headerlink" href="#hourly-or-at-minute-0" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>@hourly &lt;command-to-execute&gt;
+</code></pre></div>
+Would Produce:
+<div class="highlight"><pre><span></span><code>next at 2020-11-05 21:00:00
+then at 2020-11-05 22:00:00
+then at 2020-11-05 23:00:00
+then at 2020-11-06 00:00:00
+then at 2020-11-06 01:00:00
+</code></pre></div></p>
+<h3 id="after-rebooting">After rebooting<a class="headerlink" href="#after-rebooting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>@reboot &lt;command-to-execute&gt;
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../using_git/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using Git
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - Present
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

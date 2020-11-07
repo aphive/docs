@@ -1,0 +1,792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Home of all Documentation for Aphive">
+      
+      
+      
+      <link rel="shortcut icon" href="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>Using Git - Aphive Documentation Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>body,input{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="deep-orange">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-git-on-macos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Aphive Documentation Hub" class="md-header-nav__button md-logo" aria-label="Aphive Documentation Hub">
+      
+  <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Aphive Documentation Hub
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Using Git
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Aphive Documentation Hub" class="md-nav__button md-logo" aria-label="Aphive Documentation Hub">
+      
+  <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
+
+    </a>
+    Aphive Documentation Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_cron/" class="md-nav__link">
+      Using Cron
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Using Git
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Using Git
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-git-on-macos" class="md-nav__link">
+    Install Git on macOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-git" class="md-nav__link">
+    Configuring Git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-for-using-git" class="md-nav__link">
+    Cheatsheet for using Git
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet for using Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repositories" class="md-nav__link">
+    Create Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-changes" class="md-nav__link">
+    Making changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-changes" class="md-nav__link">
+    Group Changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-filenames" class="md-nav__link">
+    Refactor Filenames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppress-tracking" class="md-nav__link">
+    Suppress Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-fragments" class="md-nav__link">
+    Save Fragments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-history" class="md-nav__link">
+    Review History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redo-commits" class="md-nav__link">
+    Redo Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronize-changes" class="md-nav__link">
+    Synchronize Changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_homebrew/" class="md-nav__link">
+      Using Homebrew
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using_ssh_keys/" class="md-nav__link">
+      Using SSH Keys
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../upgrade_bash_on_mac/" class="md-nav__link">
+      Upgrade Bash on Mac
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      MkDocs
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="MkDocs" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        MkDocs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-mkdocs/" class="md-nav__link">
+      Using MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs_reference/" class="md-nav__link">
+      MkDocs Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../message_boxes/" class="md-nav__link">
+      MkDocs Message Boxes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-git-on-macos" class="md-nav__link">
+    Install Git on macOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-git" class="md-nav__link">
+    Configuring Git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet-for-using-git" class="md-nav__link">
+    Cheatsheet for using Git
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheatsheet for using Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repositories" class="md-nav__link">
+    Create Repositories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-changes" class="md-nav__link">
+    Making changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-changes" class="md-nav__link">
+    Group Changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-filenames" class="md-nav__link">
+    Refactor Filenames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppress-tracking" class="md-nav__link">
+    Suppress Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-fragments" class="md-nav__link">
+    Save Fragments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-history" class="md-nav__link">
+    Review History
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redo-commits" class="md-nav__link">
+    Redo Commits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronize-changes" class="md-nav__link">
+    Synchronize Changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Using Git</h1>
+                
+                <h2 id="install-git-on-macos">Install Git on macOS<a class="headerlink" href="#install-git-on-macos" title="Permanent link">&para;</a></h2>
+<p>Before proceeding, ensure that you have your SSH properly setup and configured, see the <a href="../using_ssh_keys">Using SSH Keys</a> tutorial for getting this done.</p>
+<ul>
+<li>Download the most recent release from <a href="https://sourceforge.net/projects/git-osx-installer/files/latest/download">here</a></li>
+<li>Install GitHub Desktop and launch it</li>
+<li>Click GitHub Desktop in the top left corner of your screen then select <code>Install Command Line Tool</code>, this will allow you to use GitHub from command line instead of a GUI.</li>
+</ul>
+<p>Verify you can connect to GitHub using your SSH Key. If you followed the <a href="../using_ssh_keys">Using SSH Keys</a> tutorial you will not need to enter your passphrase.</p>
+<div class="highlight"><pre><span></span><code>ssh -T git@github.com
+</code></pre></div>
+<p>If you are connecting for the first time, you will get this message, type yes then hit enter to proceed.</p>
+<div class="highlight"><pre><span></span><code># The authenticity of host &#39;github.com (000.00.000.000)&#39; can&#39;t be established.
+# RSA key fingerprint is xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx.
+# Are you sure you want to continue connecting (yes/no)?
+</code></pre></div>
+<p>You may see other things but you should get a line that says something like this:</p>
+<div class="highlight"><pre><span></span><code>Hi user! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div>
+<p>Don't worry about the shell access thing, you don't want that anyway.</p>
+<h2 id="configuring-git">Configuring Git<a class="headerlink" href="#configuring-git" title="Permanent link">&para;</a></h2>
+<p><em>Configure user information for all local repositories</em></p>
+<div class="highlight"><pre><span></span><code>git config --global user.name &quot;Full Name&quot;
+git config --global user.email &quot;user@domain.com&quot;
+git config --global color.ui auto
+</code></pre></div>
+<hr />
+<h2 id="cheatsheet-for-using-git">Cheatsheet for using Git<a class="headerlink" href="#cheatsheet-for-using-git" title="Permanent link">&para;</a></h2>
+<p>This is not an exhaustive list of what Git can do, but rather the more common things you may come across in your daily use.</p>
+<h3 id="create-repositories">Create Repositories<a class="headerlink" href="#create-repositories" title="Permanent link">&para;</a></h3>
+<p><em>Start a new repository or obtain one from an existing URL</em></p>
+<ul>
+<li>Create a new local repository with the specified name
+<div class="highlight"><pre><span></span><code>git init [project-name]
+</code></pre></div></li>
+<li>Download a project and its entire version history
+<div class="highlight"><pre><span></span><code>git clone [url]
+</code></pre></div></li>
+</ul>
+<h3 id="making-changes">Making changes<a class="headerlink" href="#making-changes" title="Permanent link">&para;</a></h3>
+<p><em>Review edits and craft a commit transaction</em></p>
+<ul>
+<li>List all new or modified files to be committed
+<div class="highlight"><pre><span></span><code>git status
+</code></pre></div></li>
+<li>Show file differences not yet staged
+<div class="highlight"><pre><span></span><code>git diff
+</code></pre></div></li>
+<li>Snapshot a file in preparation for versioning
+<div class="highlight"><pre><span></span><code>git add [file]
+</code></pre></div></li>
+<li>Show file differences between staging and the last file version
+<div class="highlight"><pre><span></span><code>git diff --staged
+</code></pre></div></li>
+<li>Unstage a file, but preserve its contents
+<div class="highlight"><pre><span></span><code>git reset [file]
+</code></pre></div></li>
+<li>Record file snapshots permanently in version history
+<div class="highlight"><pre><span></span><code>git commit -m &quot;[descriptive message]&quot;
+</code></pre></div></li>
+</ul>
+<h3 id="group-changes">Group Changes<a class="headerlink" href="#group-changes" title="Permanent link">&para;</a></h3>
+<p><em>Name a series of commits and combine completed efforts</em></p>
+<ul>
+<li>List all local branches in the current repository
+<div class="highlight"><pre><span></span><code>git branch
+</code></pre></div></li>
+<li>Create a new branch
+<div class="highlight"><pre><span></span><code>git branch [branch-name]
+</code></pre></div></li>
+<li>Switch to a specified branch and update a working directory
+<div class="highlight"><pre><span></span><code>git checkout [branch-name]
+</code></pre></div></li>
+<li>Combine a specified branch’s history into the current branch
+<div class="highlight"><pre><span></span><code>git merge [branch]
+</code></pre></div></li>
+<li>Delete a specified branch
+<div class="highlight"><pre><span></span><code>git branch -d [branch-name]
+</code></pre></div></li>
+</ul>
+<h3 id="refactor-filenames">Refactor Filenames<a class="headerlink" href="#refactor-filenames" title="Permanent link">&para;</a></h3>
+<p><em>Relocate and remove versioned files</em></p>
+<ul>
+<li>Delete a file from the working directory and stages the deletion
+<div class="highlight"><pre><span></span><code>git rm [file]
+</code></pre></div></li>
+<li>Remove a file from version control but preserves the file locally
+<div class="highlight"><pre><span></span><code>git rm --cached [file]
+</code></pre></div></li>
+<li>Change a file name and prepares it for commit
+<div class="highlight"><pre><span></span><code>git mv [file-original] [file-renamed]
+</code></pre></div></li>
+</ul>
+<h3 id="suppress-tracking">Suppress Tracking<a class="headerlink" href="#suppress-tracking" title="Permanent link">&para;</a></h3>
+<p><em>Exclude temporary files and paths</em></p>
+<ul>
+<li>A text file named <code>.gitignore</code> suppresses accidental versioning of
+files and paths matching the specified patterns, examples:
+<div class="highlight"><pre><span></span><code>*.log
+build/
+temp-*
+</code></pre></div></li>
+<li>List all ignored files in a project
+<div class="highlight"><pre><span></span><code>git ls-files --other --ignored --exclude-standard
+</code></pre></div></li>
+</ul>
+<h3 id="save-fragments">Save Fragments<a class="headerlink" href="#save-fragments" title="Permanent link">&para;</a></h3>
+<p><em>Shelve and restore incomplete changes</em></p>
+<ul>
+<li>Temporarily store all modified tracked files
+<div class="highlight"><pre><span></span><code>git stash
+</code></pre></div></li>
+<li>Restore the most recently stashed files
+<div class="highlight"><pre><span></span><code>git stash pop
+</code></pre></div></li>
+<li>List all stashed changesets
+<div class="highlight"><pre><span></span><code>git stash list
+</code></pre></div></li>
+<li>Discard the most recently stashed changeset
+<div class="highlight"><pre><span></span><code>git stash drop
+</code></pre></div></li>
+</ul>
+<h3 id="review-history">Review History<a class="headerlink" href="#review-history" title="Permanent link">&para;</a></h3>
+<p><em>Browse and inspect the evolution of project files</em></p>
+<ul>
+<li>List version history for the current branch
+<div class="highlight"><pre><span></span><code>git log
+</code></pre></div></li>
+<li>List version history for a file, including renames
+<div class="highlight"><pre><span></span><code>git log --follow [file]
+</code></pre></div></li>
+<li>Show content differences between two branches
+<div class="highlight"><pre><span></span><code>git diff [first-branch]...[second-branch]
+</code></pre></div></li>
+<li>Output metadata and content changes of the specified commit
+<div class="highlight"><pre><span></span><code>git show [commit]
+</code></pre></div></li>
+</ul>
+<h3 id="redo-commits">Redo Commits<a class="headerlink" href="#redo-commits" title="Permanent link">&para;</a></h3>
+<p><em>Erase mistakes and craft replacement history</em></p>
+<ul>
+<li>Undo all commits after [commit], preserving changes locally
+<div class="highlight"><pre><span></span><code>git reset [commit]
+</code></pre></div></li>
+<li>Discard all history and changes back to the specified commit
+<div class="highlight"><pre><span></span><code>git reset --hard [commit]
+</code></pre></div></li>
+</ul>
+<h3 id="synchronize-changes">Synchronize Changes<a class="headerlink" href="#synchronize-changes" title="Permanent link">&para;</a></h3>
+<p><em>Register a repository bookmark and exchange version history</em></p>
+<ul>
+<li>Download all history from the repository bookmark
+<div class="highlight"><pre><span></span><code>git fetch [bookmark]
+</code></pre></div></li>
+<li>Combine bookmark’s branch into current local branch
+<div class="highlight"><pre><span></span><code>git merge [bookmark]/[branch]
+</code></pre></div></li>
+<li>Upload all local branch commits to GitHub
+<div class="highlight"><pre><span></span><code>git push [alias] [branch]
+</code></pre></div></li>
+<li>Download bookmark history and incorporates changes
+<div class="highlight"><pre><span></span><code>git pull
+</code></pre></div></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../using_cron/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Using Cron
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../using_homebrew/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using Homebrew
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - Present
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
