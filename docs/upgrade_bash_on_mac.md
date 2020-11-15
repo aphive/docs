@@ -30,7 +30,7 @@ There is NO WARRANTY, to the extent permitted by law.
 GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
 Copyright (C) 2007 Free Software Foundation, Inc.
 ```
-## Whitelisting the new Bash
+## Allowing the new Bash
 * Open your shells file for editing:
 ```
 sudo vi /etc/shells
