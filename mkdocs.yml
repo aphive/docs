@@ -1,0 +1,86 @@
+# Project information
+site_name: Aphive Documentation Hub
+site_description: Home of all Documentation for Aphive
+site_url:
+
+# Copyright
+copyright: 'Copyright &copy; 2019 - Present'
+
+# Navigation
+nav:
+  - Home: index.md
+  - Using Cron: using_cron.md
+  - Using Git: using_git.md
+  - Using Homebrew: using_homebrew.md
+  - Using SSH Keys: using_ssh_keys.md
+  - Upgrade Bash on Mac: upgrade_bash_on_mac.md
+  - MkDocs:
+    - Using MkDocs: using-mkdocs.md
+    - MkDocs Reference: mkdocs_reference.md
+    - MkDocs Message Boxes: message_boxes.md
+# <!-- START CUSTOMIZATION SECTION -->
+# Documentation and theme
+theme:
+  logo: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
+  favicon: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
+  font:
+    text: 'IBM Plex Sans'
+    code: 'IBM Plex Mono'
+  name: 'material'
+  palette:
+    primary: 'white'
+    accent: 'deep orange'
+
+extra_css:
+  - 'stylesheets/extra.css'
+
+extra_javascript:
+  - javascripts/mathjax-config.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.abbr
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.pathconverter
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tilde
+# <!-- END CUSTOMIZATION SECTION -->
