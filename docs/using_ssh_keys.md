@@ -24,10 +24,10 @@ Run the following command to generate your key, repeat as needed to create more.
 * `-t ecdsa` - Which Algorithm to use to build the key.
 * `-b 521` - How many bits to apply to the key.
 * `-C "your_message"` - Add a custom message to the key. You can leave this out if you choose.
-* `-f "/home/usrname/.ssh/key_name_here"` - Where to save the key.
+* `-f "/home/user_name/.ssh/key_name_here"` - Where to save the key.
 
 ```
-ssh-keygen -t ecdsa -b 521 -C "your_message" -f "/home/cayobuay/.ssh/id_ecdsa"
+ssh-keygen -t ecdsa -b 521 -C "your_message" -f "/home/user_name/.ssh/id_ecdsa"
 ```
 
 You will now be prompted to enter your passphrase, while this is not mandatory; we strongly suggest using one.
@@ -44,8 +44,8 @@ Once the key is generated, you will see an output like this:
 Generating public/private ecdsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /home/usrname/.ssh/id_ecdsa
-Your public key has been saved in /home/usrname/.ssh/id_ecdsa.pub
+Your identification has been saved in /home/user_name/.ssh/id_ecdsa
+Your public key has been saved in /home/user_name/.ssh/id_ecdsa.pub
 The key fingerprint is:
 SHA256:vEcqEgn2oHbtJkV5Niscgd1SZKDC6UpURuy5n4Iva4Q message
 The key's randomart image is:
@@ -62,40 +62,45 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+!!! warning
+    The process you just went through will create a set of two keys for each one you generate as follows:
+
+    * id_ecdsa - your private key. **DO NOT** share this with anyone.
+    * id_ecdsa.pub - your public key. Only share this key.
+
 That's it, you have SSH Keys that you can use where needed. Github for example.
 
-## Adding your SSH Keys to your SSH Agent
+## Adding Keys to your SSH Agent
 
-Start the SSH Agent in the background
+### On Linux
+
+Start the ssh-agent in the background.
 ```
 eval "$(ssh-agent -s)"
 ```
 
-Add your key:
+Add your SSH private key to the ssh-agent.
+
 ```
 ssh-add ~/.ssh/id_ecdsa
 ```
 
-Autoload keys into your keychain. I use vim, but change vi to your editor of choice.
+
+### On Mac
+```
+eval "$(ssh-agent -s)"
+```
 ```
 vi ~/.ssh/config
 ```
-
-Paste in the following
 ```
 Host *
   AddKeysToAgent yes
+  UseKeychain yes
   IdentityFile ~/.ssh/id_ecdsa
 ```
-
-Run the following command
 ```
 ssh-add -K ~/.ssh/id_ecdsa
 ```
 
-List all managed keys
-```
-ssh-add -l
-```
-
-That's it, your keys are ready to be used.
+Note: The -K option is Apple's standard version of ssh-add, which stores the passphrase in your keychain for you when you add an ssh key to the ssh-agent.

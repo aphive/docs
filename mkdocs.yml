@@ -10,7 +10,9 @@ copyright: 'Copyright &copy; 2019 - Present'
 nav:
   - Home: index.md
   - Using Cron: using_cron.md
-  - Using Git: using_git.md
+  - Version Control:
+    - Intro to Version Control: version_control.md
+    - Git: using_git.md
   - Using Homebrew: using_homebrew.md
   - Using SSH Keys: using_ssh_keys.md
   - Upgrade Bash on Mac: upgrade_bash_on_mac.md
