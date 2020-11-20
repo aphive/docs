@@ -15,7 +15,7 @@
     
     
       
-        <title>Using SSH Keys - Aphive Documentation Hub</title>
+        <title>Intro to Version Control - Aphive Documentation Hub</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#choosing-an-algorithm-and-key-size" class="md-skip">
+        <a href="#version-control" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Using SSH Keys
+              Intro to Version Control
             
           </span>
         </div>
@@ -188,10 +188,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Version Control
@@ -209,11 +211,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../version_control/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Intro to Version Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Intro to Version Control
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-version-control" class="md-nav__link">
+    What is Version Control?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-a-vcs-version-control-system" class="md-nav__link">
+    Why use a VCS (Version Control System)?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-git" class="md-nav__link">
+    Why Git?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -250,79 +304,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Using SSH Keys
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../using_ssh_keys/" class="md-nav__link">
       Using SSH Keys
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-an-algorithm-and-key-size" class="md-nav__link">
-    Choosing an Algorithm and Key Size
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generating-your-keys" class="md-nav__link">
-    Generating your Key(s)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-keys-to-your-ssh-agent" class="md-nav__link">
-    Adding Keys to your SSH Agent
-  </a>
-  
-    <nav class="md-nav" aria-label="Adding Keys to your SSH Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#on-linux" class="md-nav__link">
-    On Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#on-mac" class="md-nav__link">
-    On Mac
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -414,6 +400,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -422,43 +410,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-an-algorithm-and-key-size" class="md-nav__link">
-    Choosing an Algorithm and Key Size
+  <a href="#what-is-version-control" class="md-nav__link">
+    What is Version Control?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-your-keys" class="md-nav__link">
-    Generating your Key(s)
+  <a href="#why-use-a-vcs-version-control-system" class="md-nav__link">
+    Why use a VCS (Version Control System)?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-keys-to-your-ssh-agent" class="md-nav__link">
-    Adding Keys to your SSH Agent
+  <a href="#why-git" class="md-nav__link">
+    Why Git?
   </a>
-  
-    <nav class="md-nav" aria-label="Adding Keys to your SSH Agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#on-linux" class="md-nav__link">
-    On Linux
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#on-mac" class="md-nav__link">
-    On Mac
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -475,89 +443,22 @@
               
                 
                 
-                  <h1>Using SSH Keys</h1>
-                
-                <h2 id="choosing-an-algorithm-and-key-size">Choosing an Algorithm and Key Size<a class="headerlink" href="#choosing-an-algorithm-and-key-size" title="Permanent link">&para;</a></h2>
-<p>I use <strong>ecdsa</strong> should you be wondering as I use in the examples.</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>SSH supports several public key algorithms for authentication keys. These include:</p>
-<p><strong>rsa</strong> - an old algorithm based on the difficulty of factoring large numbers. A key size of at least 2048 bits is recommended for RSA; 4096 bits is better. RSA is getting old and significant advances are being made in factoring. Choosing a different algorithm may be advisable. It is quite possible the RSA algorithm will become practically breakable in the foreseeable future. All SSH clients support this algorithm.</p>
-<p><strong>dsa</strong> - an old US government Digital Signature Algorithm. It is based on the difficulty of computing discrete logarithms. A key size of 1024 would normally be used with it. DSA in its original form is no longer recommended.</p>
-<p><strong>ecdsa</strong> - a new Digital Signature Algorithm standarized by the US government, using elliptic curves. This is probably a good algorithm for current applications. Only three key sizes are supported: 256, 384, and 521 (sic!) bits. We would recommend always using it with 521 bits, since the keys are still small and probably more secure than the smaller keys (even though they should be safe as well). Most SSH clients now support this algorithm.</p>
-<p><strong>ed25519</strong> - this is a new algorithm added in OpenSSH. Support for it in clients is not yet universal. Thus its use in general purpose applications may not yet be advisable.</p>
-<p>~ <a href="https://www.ssh.com/ssh/keygen/">Source: ssh.com</a></p>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Remember to change the defaults I'm noting below so this works for you. If you need more than one key, keep that in mind also so you are not overwriting your keys.</p>
-</div>
-<h2 id="generating-your-keys">Generating your Key(s)<a class="headerlink" href="#generating-your-keys" title="Permanent link">&para;</a></h2>
-<p>Run the following command to generate your key, repeat as needed to create more. To explain the command a bit:</p>
-<ul>
-<li><code>-t ecdsa</code> - Which Algorithm to use to build the key.</li>
-<li><code>-b 521</code> - How many bits to apply to the key.</li>
-<li><code>-C "your_message"</code> - Add a custom message to the key. You can leave this out if you choose.</li>
-<li><code>-f "/home/user_name/.ssh/key_name_here"</code> - Where to save the key.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>ssh-keygen -t ecdsa -b 521 -C &quot;your_message&quot; -f &quot;/home/user_name/.ssh/id_ecdsa&quot;
-</code></pre></div>
-<p>You will now be prompted to enter your passphrase, while this is not mandatory; we strongly suggest using one.</p>
-<div class="highlight"><pre><span></span><code>Generating public/private ecdsa key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre></div>
-<p>Once the key is generated, you will see an output like this:</p>
-<div class="highlight"><pre><span></span><code>Generating public/private ecdsa key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/user_name/.ssh/id_ecdsa
-Your public key has been saved in /home/user_name/.ssh/id_ecdsa.pub
-The key fingerprint is:
-SHA256:vEcqEgn2oHbtJkV5Niscgd1SZKDC6UpURuy5n4Iva4Q message
-The key&#39;s randomart image is:
-+---[ECDSA 521]---+
-|  o+oo=+         |
-|. +o.o+.         |
-| ==..+.+         |
-|oo.*+.+.o        |
-|o+ .== .S .      |
-|E...o..  +       |
-|o ..ooo o .      |
-| + .o+ . .       |
-|..+..            |
-+----[SHA256]-----+
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The process you just went through will create a set of two keys for each one you generate as follows:</p>
-<ul>
-<li>id_ecdsa - your private key. <strong>DO NOT</strong> share this with anyone.</li>
-<li>id_ecdsa.pub - your public key. Only share this key.</li>
-</ul>
-</div>
-<p>That's it, you have SSH Keys that you can use where needed. Github for example.</p>
-<h2 id="adding-keys-to-your-ssh-agent">Adding Keys to your SSH Agent<a class="headerlink" href="#adding-keys-to-your-ssh-agent" title="Permanent link">&para;</a></h2>
-<h3 id="on-linux">On Linux<a class="headerlink" href="#on-linux" title="Permanent link">&para;</a></h3>
-<p>Start the ssh-agent in the background.
-<div class="highlight"><pre><span></span><code>eval &quot;$(ssh-agent -s)&quot;
-</code></pre></div></p>
-<p>Add your SSH private key to the ssh-agent.</p>
-<div class="highlight"><pre><span></span><code>ssh-add ~/.ssh/id_ecdsa
-</code></pre></div>
-<h3 id="on-mac">On Mac<a class="headerlink" href="#on-mac" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>eval &quot;$(ssh-agent -s)&quot;
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>vi ~/.ssh/config
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ecdsa
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>ssh-add -K ~/.ssh/id_ecdsa
-</code></pre></div></p>
-<p>Note: The -K option is Apple's standard version of ssh-add, which stores the passphrase in your keychain for you when you add an ssh key to the ssh-agent.</p>
+                <h1 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-version-control">What is Version Control?<a class="headerlink" href="#what-is-version-control" title="Permanent link">&para;</a></h2>
+<p>Version control is at it's basic, the practice of keeping track of changes to files. Have you ever had or still have files with names like <code>FileName_rev1</code>, <code>FileName_rev2</code>, <code>FileName_final</code> then you are practicing version control. A crude version of it, but it is version control. This practice could leave you with tens or hundreds of files and it's not easy to work in a collaborative environment.</p>
+<p>As per Git:</p>
+<blockquote>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</p>
+</blockquote>
+<h2 id="why-use-a-vcs-version-control-system">Why use a VCS (Version Control System)?<a class="headerlink" href="#why-use-a-vcs-version-control-system" title="Permanent link">&para;</a></h2>
+<p>As noted above, having to keep many multiple files as you make changes to your doc is difficult to maintain and tracking what changes were made in each file without having to open each doc and reading through and comparing it to your current final version. See how this is already looking like a difficult mess to maintain?</p>
+<p>With a Version Control system you would have one file to maintain with a timeline of changes, this allows you to not only see when changes were made but what changes were made to the file. Each file in your VCS has it's own timeline so even so you can track each individually.</p>
+<h2 id="why-git">Why Git?<a class="headerlink" href="#why-git" title="Permanent link">&para;</a></h2>
+<p>While there is a wide selection of systems to choose from, Git is the more commonly used system used today. Git is a free and open source version control system. Everything in git is checksummed with a SHA-1 hash before it is stored</p>
+<blockquote>
+<p>Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.</p>
+</blockquote>
+<p>Git manages your files in a directory like structure called repositories and branches, the combination allows for granular timelines and ease for multiple people to work on the same file via git commits.</p>
                 
               
               
@@ -576,7 +477,7 @@ The key&#39;s randomart image is:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../using_homebrew/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../using_cron/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -585,19 +486,19 @@ The key&#39;s randomart image is:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using Homebrew
+                Using Cron
               </div>
             </div>
           </a>
         
         
-          <a href="../upgrade_bash_on_mac/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../using_git/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Upgrade Bash on Mac
+                Git
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
