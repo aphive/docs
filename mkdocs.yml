@@ -15,6 +15,7 @@ nav:
     - Git: using_git.md
   - Using Homebrew: using_homebrew.md
   - Using SSH Keys: using_ssh_keys.md
+  - Using pfSense: using_pfsense.md
   - Upgrade Bash on Mac: upgrade_bash_on_mac.md
   - MkDocs:
     - Using MkDocs: using-mkdocs.md
@@ -26,12 +27,12 @@ theme:
   logo: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
   favicon: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
   font:
-    text: 'IBM Plex Sans'
-    code: 'IBM Plex Mono'
+    text: 'Roboto'
+    code: 'Roboto Mono'
   name: 'material'
   palette:
     primary: 'white'
-    accent: 'deep orange'
+    accent: 'amber'
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -73,7 +74,7 @@ markdown_extensions:
   - pymdownx.pathconverter
   - pymdownx.smartsymbols
   - pymdownx.snippets:
-      base_path: docs
+      base_path: .
       check_paths: true
   - pymdownx.superfences:
       custom_fences:

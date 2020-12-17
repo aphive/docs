@@ -8,20 +8,32 @@
 ## Abbreviations
 Add the abbreviations and meaning in the `includes/abbreviations.md` file like this:
 
-```
+```yaml
 *[HTML]: Hypertext Markup Language
 *[W3C]: World Wide Web Consortium
 ```
 
-On each page you want to use abbreviations, start with `--8<-- "includes/abbreviations.md"` on line 1.
+_Example_:
 
-Use them as follows:
+=== "docs/page.md"
 
-```
+    ```` markdown
+    The HTML specification is maintained by the W3C.
+
+    --8<--​ "includes/abbreviations.md"
+    ````
+
+=== "includes/abbreviations.md"
+
+    ```` markdown
+    *[HTML]: Hyper Text Markup Language
+    *[W3C]: World Wide Web Consortium
+    ````
+
 The HTML specification is maintained by the W3C.
-```
 
-The HTML specification is maintained by the W3C.
+_Remember to locate the Markdown file containing the definitions outside of the_
+`docs` _folder or MkDocs may complain about an unreferenced file._
 
 ## Admonitions / Message Boxes
 
@@ -31,7 +43,7 @@ To see more examples of boxes, see the [Message Boxes](../message_boxes) page
 
 You can also embed code like this:
 
-```` markdown
+``` markdown
 !!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
@@ -48,7 +60,7 @@ You can also embed code like this:
     Nunc eu odio eleifend, blandit leo a, volutpat sapien. Phasellus posuere in
     sem ut cursus. Nullam sit amet tincidunt ipsum, sit amet elementum turpis.
     Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.
-````
+```
 
 !!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -92,6 +104,8 @@ To create a collapsible box, use `???` instead of `!!!`:
 [No, Click Me!](#){: .md-button .md-button--primary }
 
 ## Code blocks
+See [Supported languages](#supported-languages) at the end of the page for specific options you can add to highlight your code block.
+
 ```` markdown
 ``` python
 def bubble_sort(items):
@@ -441,3 +455,190 @@ $$x^2 + y^2 = z^2$$
 $$L_i = {1 \over N} \sum_i \sum_{j \ne y_i} [ \max(0, f(x_i;W)_j - f(x_i;W) + \Delta) ]$$
 
 When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+
+## Supported languages
+Pygments supports an ever-growing range of languages.
+
+| Programming languages | Template languages | Other markup |
+|--|--|--|
+| ActionScript | Angular templates | Apache config files |
+| Ada | Cheetah templates | Apache Pig |
+| Agda (incl. literate) | ColdFusion | BBCode |
+| Alloy | Django / Jinja templates | Cap’n Proto |
+| AMPL | ERB (Ruby templating) | CapDL |
+| ANTLR | Evoque | CMake |
+| APL | Genshi (the Trac template language) | Csound scores |
+| AppleScript | Handlebars | CSS |
+| Assembly (various) | JSP (Java Server Pages) | Debian control files |
+| Asymptote | Liquid | Diff files |
+| Augeas | Mako (the Myghty successor) | Dockerfiles |
+| AutoIt | Myghty (the HTML::Mason based framework) | DTD |
+| Awk | Slim | E-mail headers |
+| BARE | Smarty templates (PHP templating) | EBNF |
+| BBC Basic | Tea | Extempore |
+| Befunge | Twig | Flatline |
+| BlitzBasic |  | Gettext catalogs |
+| Boa |  | Gnuplot script |
+| Boo |  | Groff markup |
+| Boogie |  | Hexdumps |
+| BrainFuck |  | HTML |
+| C, C++ (incl. dialects like Arduino) |  | HTTP sessions |
+| C# |  | IDL |
+| Chapel |  | Inform |
+| Charm++ CI |  | INI-style config files |
+| Cirru |  | IRC logs (irssi style) |
+| Clay |  | Isabelle |
+| Clean |  | JSGF notation |
+| Clojure |  | JSON, JSON-LD |
+| CoffeeScript |  | Lean theorem prover |
+| ColdFusion |  | Lighttpd config files |
+| Common Lisp |  | Linux kernel log (dmesg) |
+| Component Pascal |  | LLVM assembly |
+| Coq |  | LSL scripts |
+| Croc (MiniD) |  | Makefiles |
+| Cryptol (incl. Literate Cryptol) |  | MoinMoin/Trac Wiki markup |
+| Crystal |  | MQL |
+| Cypher |  | MySQL |
+| Cython |  | NCAR command language |
+| D |  | Nginx config files |
+| Dart |  | Nix language |
+| DCPU-16 |  | Notmuch |
+| Delphi |  | NSIS scripts |
+| Devicetree |  | PEG |
+| Dylan (incl. console) |  | POV-Ray scenes |
+| Eiffel |  | PromQL |
+| Elm |  | Puppet |
+| Emacs Lisp |  | QML |
+| Email |  | Ragel |
+| Erlang (incl. shell sessions) |  | Redcode |
+| Execline |  | ReST |
+| Ezhil |  | Roboconf |
+| F* |  | Robot Framework |
+| F# |  | RPM spec files |
+| Factor |  | Rql |
+| Fancy |  | RSL |
+| Fantom |  | Scdoc |
+| Fennel |  | Sieve |
+| FloScript |  | Singularity |
+| Fortran |  | SPARQL |
+| FreeFEM++ |  | SQL, also MySQL, SQLite |
+| GAP |  | Squid configuration |
+| GDScript |  | TADS 3 |
+| Gherkin (Cucumber) |  | Terraform |
+| GLSL shaders |  | TeX |
+| GnuCOBOL (OpenCOBOL) |  | Thrift |
+| Golo |  | TNT |
+| Gosu |  | TOML |
+| Groovy |  | Treetop grammars |
+| Haskell (incl. Literate Haskell) |  | USD (Universal Scene Description) |
+| Haxe |  | Varnish configs |
+| HLSL shaders |  | VGL |
+| HSpec |  | Vim Script |
+| Hy |  | WDiff |
+| IDL |  | Web IDL |
+| Idris (incl. Literate Idris) |  | Windows batch files |
+| Igor Pro |  | Windows Registry files |
+| Io |  | XML |
+| Jags |  | XSLT |
+| Jasmin |  | YAML |
+| Java |  | YANG |
+| JavaScript |  |  |
+| Jcl |  |  |
+| Julia |  |  |
+| Kotlin |  |  |
+| Lasso (incl. templating) |  |  |
+| Limbo |  |  |
+| LiveScript |  |  |
+| LLVM MIR |  |  |
+| Logos |  |  |
+| Logtalk |  |  |
+| Lua |  |  |
+| Mathematica |  |  |
+| Matlab |  |  |
+| MiniScript |  |  |
+| Modelica |  |  |
+| Modula-2 |  |  |
+| Monkey |  |  |
+| Monte |  |  |
+| MoonScript |  |  |
+| Mosel |  |  |
+| MuPad |  |  |
+| NASM |  |  |
+| Nemerle |  |  |
+| NesC |  |  |
+| NewLISP |  |  |
+| Nim |  |  |
+| Nit |  |  |
+| Notmuch |  |  |
+| NuSMV |  |  |
+| Objective-C |  |  |
+| Objective-J |  |  |
+| OCaml |  |  |
+| Octave |  |  |
+| Opa |  |  |
+| ParaSail |  |  |
+| Pawn |  |  |
+| Perl 5 |  |  |
+| PHP |  |  |
+| Pike |  |  |
+| Pointless |  |  |
+| Pony |  |  |
+| PostScript |  |  |
+| PovRay |  |  |
+| PowerShell |  |  |
+| Praat |  |  |
+| Prolog |  |  |
+| Python 2.x and 3.x (incl. console sessions and tracebacks) |  |  |
+| QBasic |  |  |
+| Racket |  |  |
+| Raku a.k.a. Perl 6 |  |  |
+| ReasonML |  |  |
+| REBOL |  |  |
+| Red |  |  |
+| Redcode |  |  |
+| Rexx |  |  |
+| Ride |  |  |
+| Ruby (incl. irb sessions) |  |  |
+| Rust |  |  |
+| S, S-Plus, R |  |  |
+| Scala |  |  |
+| Scdoc |  |  |
+| Scheme |  |  |
+| Scilab |  |  |
+| SGF |  |  |
+| Shell scripts (Bash, Tcsh, Fish) |  |  |
+| Shen |  |  |
+| Silver |  |  |
+| Slash |  |  |
+| Slurm |  |  |
+| Smalltalk |  |  |
+| SNOBOL |  |  |
+| Snowball |  |  |
+| Solidity |  |  |
+| SourcePawn |  |  |
+| Stan |  |  |
+| Standard ML |  |  |
+| Stata |  |  |
+| SuperCollider |  |  |
+| Swift |  |  |
+| Swig |  |  |
+| Tcl |  |  |
+| Tera Term language |  |  |
+| TypeScript |  |  |
+| TypoScript |  |  |
+| Unicon |  |  |
+| Urbiscript |  |  |
+| USD |  |  |
+| Vala |  |  |
+| VBScript |  |  |
+| Verilog, SystemVerilog |  |  |
+| VHDL |  |  |
+| Visual Basic.NET |  |  |
+| Visual FoxPro |  |  |
+| Whiley |  |  |
+| XQuery |  |  |
+| Xtend |  |  |
+| Zeek |  |  |
+| Zephir |  |  |
+| Zig |  |  |

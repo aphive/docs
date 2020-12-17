@@ -2,7 +2,7 @@
 
 ### MkDocs
 
-[MkDocs](https://squidfunk.github.io/mkdocs-material/) is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+[MkDocs](https://www.mkdocs.org/) is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 
 ```
 pip3 install mkdocs
@@ -10,7 +10,7 @@ pip3 install mkdocs
 
 ### MkDocs Material Theme
 
-Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
+[Material](https://squidfunk.github.io/mkdocs-material/) is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
 
 ```
 pip3 install mkdocs-material
