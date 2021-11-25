@@ -10,8 +10,9 @@
       
       
       
-      <link rel="shortcut icon" href="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -19,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -34,17 +35,21 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
-        <style>body,input{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"IBM Plex Sans";--md-code-font-family:"IBM Plex Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
+
+
     
     
   </head>
@@ -55,9 +60,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="deep-orange">
-      
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="amber">
   
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -76,46 +83,54 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="Aphive Documentation Hub" class="md-header-nav__button md-logo" aria-label="Aphive Documentation Hub">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Aphive Documentation Hub" class="md-header__button md-logo" aria-label="Aphive Documentation Hub" data-md-component="logo">
       
   <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Aphive Documentation Hub
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               MkDocs Reference
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -132,25 +147,30 @@
     
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
         
+          
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Aphive Documentation Hub" class="md-nav__button md-logo" aria-label="Aphive Documentation Hub">
+    <a href=".." title="Aphive Documentation Hub" class="md-nav__button md-logo" aria-label="Aphive Documentation Hub" data-md-component="logo">
       
   <img src="https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg" alt="logo">
 
@@ -164,110 +184,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../using_cron/" class="md-nav__link">
-      Using Cron
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Version Control
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Version Control" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        Version Control
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../version_control/" class="md-nav__link">
-      Intro to Version Control
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../using_git/" class="md-nav__link">
-      Git
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../using_homebrew/" class="md-nav__link">
-      Using Homebrew
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../using_ssh_keys/" class="md-nav__link">
-      Using SSH Keys
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../upgrade_bash_on_mac/" class="md-nav__link">
-      Upgrade Bash on Mac
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -275,61 +200,287 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
-    
-    <label class="md-nav__link" for="nav-7">
-      MkDocs
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="MkDocs" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon"></span>
-        MkDocs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../using-mkdocs/" class="md-nav__link">
-      Using MkDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_cron/" class="md-nav__link">
+        Using Cron
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Version Control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Version Control" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Version Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version_control/" class="md-nav__link">
+        Intro to Version Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_homebrew/" class="md-nav__link">
+        Using Homebrew
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_ssh_keys/" class="md-nav__link">
+        Using SSH Keys
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_pfsense/" class="md-nav__link">
+        Using pfSense
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade_bash_on_mac/" class="md-nav__link">
+        Upgrade Bash on Mac
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Apt Sources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apt Sources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Apt Sources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apt/" class="md-nav__link">
+        Apt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debian_sources/" class="md-nav__link">
+        Debian Sources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu_sources/" class="md-nav__link">
+        Ubuntu Sources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          MkDocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MkDocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          MkDocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-mkdocs/" class="md-nav__link">
+        Using MkDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MkDocs Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         MkDocs Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      MkDocs Reference
-    </a>
-    
+      </a>
       
+        
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -339,7 +490,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#abbreviations" class="md-nav__link">
@@ -519,28 +670,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    Supported languages
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message_boxes/" class="md-nav__link">
+        MkDocs Message Boxes
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../message_boxes/" class="md-nav__link">
-      MkDocs Message Boxes
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -550,11 +713,15 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -564,7 +731,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#abbreviations" class="md-nav__link">
@@ -744,6 +911,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#supported-languages" class="md-nav__link">
+    Supported languages
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -752,27 +926,38 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="what-can-i-do-in-pages">What can I do in pages?<a class="headerlink" href="#what-can-i-do-in-pages" title="Permanent link">&para;</a></h1>
+                <h1 id="what-can-i-do-in-pages">What can I do in pages?</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Images used below are provided by <a href="Placeholder.com">Placeholder.com</a>, a free image placeholder service for web designers.</p>
 </div>
-<h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">&para;</a></h2>
+<h2 id="abbreviations">Abbreviations</h2>
 <p>Add the abbreviations and meaning in the <code>includes/abbreviations.md</code> file like this:</p>
-<div class="highlight"><pre><span></span><code>*[HTML]: Hypertext Markup Language
+<div class="highlight"><pre><span></span><code><span class="err">*</span><span class="p p-Indicator">[</span><span class="nv">HTML</span><span class="p p-Indicator">]:</span> <span class="l l-Scalar l-Scalar-Plain">Hypertext Markup Language</span>
+<span class="err">*</span><span class="p p-Indicator">[</span><span class="nv">W3C</span><span class="p p-Indicator">]:</span> <span class="l l-Scalar l-Scalar-Plain">World Wide Web Consortium</span>
+</code></pre></div>
+<p><em>Example</em>:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">docs/page.md</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>The HTML specification is maintained by the W3C.
+
+--8&lt;--​ &quot;includes/abbreviations.md&quot;
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">includes/abbreviations.md</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>*[HTML]: Hyper Text Markup Language
 *[W3C]: World Wide Web Consortium
 </code></pre></div>
-<p>On each page you want to use abbreviations, start with <code>--8&lt;-- "includes/abbreviations.md"</code> on line 1.</p>
-<p>Use them as follows:</p>
-<div class="highlight"><pre><span></span><code>The HTML specification is maintained by the W3C.
-</code></pre></div>
+</div>
+</div>
 <p>The <abbr title="Hypertext Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
-<h2 id="admonitions-message-boxes">Admonitions / Message Boxes<a class="headerlink" href="#admonitions-message-boxes" title="Permanent link">&para;</a></h2>
+<p><em>Remember to locate the Markdown file containing the definitions outside of the</em>
+<code>docs</code> <em>folder or MkDocs may complain about an unreferenced file.</em></p>
+<h2 id="admonitions-message-boxes">Admonitions / Message Boxes</h2>
 <p>Supported types are: <code>note</code>/<code>seealso</code>, <code>abstract</code>/<code>summary</code>/<code>tldr</code>, <code>info</code>/<code>todo</code>, <code>tip</code>/<code>hint</code>/<code>important</code>, <code>success</code>/<code>check</code>/<code>done</code>, <code>question</code>/<code>help</code>/<code>faq</code>, <code>warning</code>/<code>caution</code>/<code>attention</code>, <code>failure</code>/<code>fail</code>/<code>missing</code>, <code>danger</code>/<code>error</code>, <code>bug</code>, <code>quote</code>/<code>cite</code>.</p>
 <p>To see more examples of boxes, see the <a href="../message_boxes">Message Boxes</a> page</p>
 <p>You can also embed code like this:</p>
@@ -814,17 +999,20 @@ Etiam ipsum quam, mattis in purus vitae, lacinia fermentum enim.</p>
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 </code></pre></div>
-<details class="note"><summary>Note</summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+<details class="note">
+<summary>Note</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
 massa, nec semper lorem quam in massa.</p>
 </details>
-<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>[Click Me](#){: .md-button }
-[No, Click Me!](#){: .md-button .md-button--primary }
+<h2 id="buttons">Buttons</h2>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Click Me</span>](<span class="na">#</span>){: .md-button }
+[<span class="nt">No, Click Me!</span>](<span class="na">#</span>){: .md-button .md-button--primary }
 </code></pre></div>
 <p><a class="md-button" href="#">Click Me</a>
 <a class="md-button md-button--primary" href="#">No, Click Me!</a></p>
-<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
+<h2 id="code-blocks">Code blocks</h2>
+<p>See <a href="#supported-languages">Supported languages</a> at the end of the page for specific options you can add to highlight your code block.</p>
 <div class="highlight"><pre><span></span><code>``` python
 def bubble_sort(items):
     for i in range(len(items)):
@@ -839,7 +1027,7 @@ def bubble_sort(items):
             <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
-<h3 id="display-line-numbers">Display line numbers<a class="headerlink" href="#display-line-numbers" title="Permanent link">&para;</a></h3>
+<h3 id="display-line-numbers">Display line numbers</h3>
 <div class="highlight"><pre><span></span><code>``` python linenums=&quot;1&quot;
 def bubble_sort(items):
     for i in range(len(items)):
@@ -848,18 +1036,18 @@ def bubble_sort(items):
                 items[j], items[j + 1] = items[j + 1], items[j]
 ```
 </code></pre></div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
                 <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="highlighting-specific-lines">Highlighting specific lines<a class="headerlink" href="#highlighting-specific-lines" title="Permanent link">&para;</a></h3>
+<h3 id="highlighting-specific-lines">Highlighting specific lines</h3>
 <div class="highlight"><pre><span></span><code>``` python hl_lines=&quot;2 4&quot;
 def bubble_sort(items):
     for i in range(len(items)):
@@ -874,53 +1062,53 @@ def bubble_sort(items):
 <span class="hll">            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
 </span>                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </code></pre></div>
-<h3 id="highlighting-inline-code">Highlighting inline code<a class="headerlink" href="#highlighting-inline-code" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>The `#!python range()` function is used to generate a sequence of numbers.
+<h3 id="highlighting-inline-code">Highlighting inline code</h3>
+<p><div class="highlight"><pre><span></span><code>The <span class="sb">`#!python range()`</span> function is used to generate a sequence of numbers.
 </code></pre></div>
 The <code class="highlight"><span class="nb">range</span><span class="p">()</span></code> function is used to generate a sequence of numbers.</p>
-<h2 id="keyboard-keys">Keyboard Keys<a class="headerlink" href="#keyboard-keys" title="Permanent link">&para;</a></h2>
+<h2 id="keyboard-keys">Keyboard Keys</h2>
 <div class="highlight"><pre><span></span><code>++ctrl+alt+del++
 </code></pre></div>
 <p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p>
-<h2 id="tabbed-content">Tabbed content<a class="headerlink" href="#tabbed-content" title="Permanent link">&para;</a></h2>
+<h2 id="tabbed-content">Tabbed content</h2>
 <div class="highlight"><pre><span></span><code>=== &quot;C&quot;
 
     ``` c
-    #include &lt;stdio.h&gt;
+    <span class="ni">#include</span> &lt;stdio.h&gt;
 
     int main(void) {
       printf(&quot;Hello world!\n&quot;);
       return 0;
     }
-    ```
+<span class="sb">    ```</span>
 
-=== &quot;C++&quot;
+<span class="sb">=== &quot;C++&quot;</span>
 
-    ``` c++
-    #include &lt;iostream&gt;
+<span class="sb">    ``` c++</span>
+<span class="sb">    #include &lt;iostream&gt;</span>
 
-    int main(void) {
-      std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;
-      return 0;
-    }
-    ```
+<span class="sb">    int main(void) {</span>
+<span class="sb">      std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;</span>
+<span class="sb">      return 0;</span>
+<span class="sb">    }</span>
+<span class="sb">    ```</span>
 </code></pre></div>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">C</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">C</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">C++</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">C++</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -937,14 +1125,14 @@ The <code class="highlight"><span class="nb">range</span><span class="p">()</spa
     2. Donec vitae suscipit est
     3. Nulla tempor lobortis orci
 </code></pre></div>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Unordered list</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Unordered list</label><div class="tabbed-content">
 <ul>
 <li>Sed sagittis eleifend rutrum</li>
 <li>Donec vitae suscipit est</li>
 <li>Nulla tempor lobortis orci</li>
 </ul>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Ordered list</label><div class="tabbed-content">
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Ordered list</label><div class="tabbed-content">
 <ol>
 <li>Sed sagittis eleifend rutrum</li>
 <li>Donec vitae suscipit est</li>
@@ -952,15 +1140,15 @@ The <code class="highlight"><span class="nb">range</span><span class="p">()</spa
 </ol>
 </div>
 </div>
-<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
+<h2 id="footnotes">Footnotes</h2>
 <div class="highlight"><pre><span></span><code>Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
 
 [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 [^2]: https://loremipsum.io/
 </code></pre></div>
 <p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h2>
-<h3 id="highlighting-changes">Highlighting changes<a class="headerlink" href="#highlighting-changes" title="Permanent link">&para;</a></h3>
+<h2 id="formatting">Formatting</h2>
+<h3 id="highlighting-changes">Highlighting changes</h3>
 <div class="highlight"><pre><span></span><code>Text can be <del class="critic">deleted</del> and replacement text <ins class="critic">added</ins>. This can also be
 combined into <del class="critic">one</del><ins class="critic">a single</ins> operation. <mark class="critic">Highlighting</mark> is also
 possible <span class="critic comment">and comments can be added inline</span>.
@@ -979,20 +1167,20 @@ possible <span class="critic comment">and comments can be added inline</span>.</
 <p>Formatting can also be applied to blocks, by putting the opening and closing
 tags on separate lines and adding new lines between the tags and the content.</p>
 </mark>
-<h3 id="subscripts-and-superscripts">Subscripts and Superscripts<a class="headerlink" href="#subscripts-and-superscripts" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>* H~2~0
-* A^T^A
+<h3 id="subscripts-and-superscripts">Subscripts and Superscripts</h3>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> H~2~0
+<span class="k">*</span> A^T^A
 </code></pre></div>
 <ul>
 <li>H<sub>2</sub>0</li>
 <li>A<sup>T</sup>A</li>
 </ul>
-<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>![Placeholder](https://via.placeholder.com/150){: align=left width=50 }
+<h3 id="images">Images</h3>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Placeholder</span>](<span class="na">https://via.placeholder.com/150</span>){: align=left width=50 }
 </code></pre></div>
 <p><img align="left" alt="Placeholder" src="https://via.placeholder.com/150" width="50" /></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
-<h4 id="image-captions">Image captions<a class="headerlink" href="#image-captions" title="Permanent link">&para;</a></h4>
+<h4 id="image-captions">Image captions</h4>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://via.placeholder.com/150&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>Image caption<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
@@ -1003,19 +1191,19 @@ tags on separate lines and adding new lines between the tags and the content.</p
   <figcaption>Image caption</figcaption>
 </figure>
 
-<h4 id="image-lazy-loading">Image lazy-loading<a class="headerlink" href="#image-lazy-loading" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>![Placeholder](https://via.placeholder.com/150){: loading=lazy width=50 }
+<h4 id="image-lazy-loading">Image lazy-loading</h4>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Placeholder</span>](<span class="na">https://via.placeholder.com/150</span>){: loading=lazy width=50 }
 </code></pre></div>
 <p><img alt="Placeholder" loading="lazy" src="https://via.placeholder.com/150" width="50" /></p>
-<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
-<h4 id="unordered">unordered<a class="headerlink" href="#unordered" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>* Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
+<h3 id="lists">Lists</h3>
+<h4 id="unordered">unordered</h4>
+<div class="highlight"><pre><span></span><code><span class="k">*</span> Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
   accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
   lacinia sed. Aenean in finibus diam.
 
-    * Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
-    * Nam vulputate tincidunt fringilla.
-    * Nullam dignissim ultrices urna non auctor.
+    <span class="k">*</span> Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
+    <span class="k">*</span> Nam vulputate tincidunt fringilla.
+    <span class="k">*</span> Nullam dignissim ultrices urna non auctor.
 </code></pre></div>
 <ul>
 <li>
@@ -1029,21 +1217,21 @@ tags on separate lines and adding new lines between the tags and the content.</p
 </ul>
 </li>
 </ul>
-<h4 id="ordered-lists">ordered lists<a class="headerlink" href="#ordered-lists" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>1. Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
+<h4 id="ordered-lists">ordered lists</h4>
+<div class="highlight"><pre><span></span><code><span class="k">1.</span> Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
   sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis
   nulla. Vivamus a pharetra leo.
 
-    1. Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
+    <span class="k">1.</span> Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
       quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
       ultricies libero efficitur sed.
 
-    2. Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
+    <span class="k">2.</span> Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
       rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a.
 
-        1. Mauris dictum mi lacus
-        2. Ut sit amet placerat ante
-        3. Suspendisse ac eros arcu
+        <span class="k">1.</span> Mauris dictum mi lacus
+        <span class="k">2.</span> Ut sit amet placerat ante
+        <span class="k">3.</span> Suspendisse ac eros arcu
 </code></pre></div>
 <ol>
 <li>
@@ -1068,12 +1256,12 @@ tags on separate lines and adding new lines between the tags and the content.</p
 </ol>
 </li>
 </ol>
-<h4 id="definition-lists">definition lists<a class="headerlink" href="#definition-lists" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>`Lorem ipsum dolor sit amet`
+<h4 id="definition-lists">definition lists</h4>
+<div class="highlight"><pre><span></span><code><span class="sb">`Lorem ipsum dolor sit amet`</span>
 :   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
     tellus non sem sollicitudin, quis rutrum leo facilisis.
 
-`Cras arcu libero`
+<span class="sb">`Cras arcu libero`</span>
 :   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin
     ut eros sed sapien ullamcorper consequat. Nunc ligula ante.
 
@@ -1094,13 +1282,13 @@ Nam vulputate tincidunt fringilla.
 Nullam dignissim ultrices urna non auctor.</p>
 </dd>
 </dl>
-<h4 id="tasklists">tasklists<a class="headerlink" href="#tasklists" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-* [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
-    * [x] In scelerisque nibh non dolor mollis congue sed et metus
-    * [ ] Praesent sed risus massa
-* [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+<h4 id="tasklists">tasklists</h4>
+<div class="highlight"><pre><span></span><code><span class="k">* [x]</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<span class="k">* [ ]</span> Vestibulum convallis sit amet nisi a tincidunt
+    <span class="k">* [x]</span> In hac habitasse platea dictumst
+    <span class="k">* [x]</span> In scelerisque nibh non dolor mollis congue sed et metus
+    <span class="k">* [ ]</span> Praesent sed risus massa
+<span class="k">* [ ]</span> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 </code></pre></div>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
@@ -1112,7 +1300,7 @@ Nullam dignissim ultrices urna non auctor.</p>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
 </ul>
-<h2 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h2>
+<h2 id="math">Math</h2>
 <p>To display Math if needed, you should use MathJax formating, a nice how to can be found <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
 <p><em>To see how any formula was written, right-click on the expression and choose "Show Math As &gt; TeX Commands", the '$' will not display</em></p>
 <p><strong>Examples</strong>:</p>
@@ -1125,6 +1313,919 @@ When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
 <div class="arithmatex">\[x^2 + y^2 = z^2\]</div>
 <div class="arithmatex">\[L_i = {1 \over N} \sum_i \sum_{j \ne y_i} [ \max(0, f(x_i;W)_j - f(x_i;W) + \Delta) ]\]</div>
 <p>When <span class="arithmatex">\(a \ne 0\)</span>, there are two solutions to <span class="arithmatex">\(ax^2 + bx + c = 0\)</span> and they are <span class="arithmatex">\(<span class="arithmatex">\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\)</span>\)</span></p>
+<h2 id="supported-languages">Supported languages</h2>
+<p>Pygments supports an ever-growing range of languages.</p>
+<table>
+<thead>
+<tr>
+<th>Programming languages</th>
+<th>Template languages</th>
+<th>Other markup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ActionScript</td>
+<td>Angular templates</td>
+<td>Apache config files</td>
+</tr>
+<tr>
+<td>Ada</td>
+<td>Cheetah templates</td>
+<td>Apache Pig</td>
+</tr>
+<tr>
+<td>Agda (incl. literate)</td>
+<td>ColdFusion</td>
+<td>BBCode</td>
+</tr>
+<tr>
+<td>Alloy</td>
+<td>Django / Jinja templates</td>
+<td>Cap’n Proto</td>
+</tr>
+<tr>
+<td>AMPL</td>
+<td>ERB (Ruby templating)</td>
+<td>CapDL</td>
+</tr>
+<tr>
+<td>ANTLR</td>
+<td>Evoque</td>
+<td>CMake</td>
+</tr>
+<tr>
+<td>APL</td>
+<td>Genshi (the Trac template language)</td>
+<td>Csound scores</td>
+</tr>
+<tr>
+<td>AppleScript</td>
+<td>Handlebars</td>
+<td>CSS</td>
+</tr>
+<tr>
+<td>Assembly (various)</td>
+<td>JSP (Java Server Pages)</td>
+<td>Debian control files</td>
+</tr>
+<tr>
+<td>Asymptote</td>
+<td>Liquid</td>
+<td>Diff files</td>
+</tr>
+<tr>
+<td>Augeas</td>
+<td>Mako (the Myghty successor)</td>
+<td>Dockerfiles</td>
+</tr>
+<tr>
+<td>AutoIt</td>
+<td>Myghty (the <abbr title="Hypertext Markup Language">HTML</abbr>::Mason based framework)</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td>Awk</td>
+<td>Slim</td>
+<td>E-mail headers</td>
+</tr>
+<tr>
+<td>BARE</td>
+<td>Smarty templates (PHP templating)</td>
+<td>EBNF</td>
+</tr>
+<tr>
+<td>BBC Basic</td>
+<td>Tea</td>
+<td>Extempore</td>
+</tr>
+<tr>
+<td>Befunge</td>
+<td>Twig</td>
+<td>Flatline</td>
+</tr>
+<tr>
+<td>BlitzBasic</td>
+<td></td>
+<td>Gettext catalogs</td>
+</tr>
+<tr>
+<td>Boa</td>
+<td></td>
+<td>Gnuplot script</td>
+</tr>
+<tr>
+<td>Boo</td>
+<td></td>
+<td>Groff markup</td>
+</tr>
+<tr>
+<td>Boogie</td>
+<td></td>
+<td>Hexdumps</td>
+</tr>
+<tr>
+<td>BrainFuck</td>
+<td></td>
+<td><abbr title="Hypertext Markup Language">HTML</abbr></td>
+</tr>
+<tr>
+<td>C, C++ (incl. dialects like Arduino)</td>
+<td></td>
+<td>HTTP sessions</td>
+</tr>
+<tr>
+<td>C#</td>
+<td></td>
+<td>IDL</td>
+</tr>
+<tr>
+<td>Chapel</td>
+<td></td>
+<td>Inform</td>
+</tr>
+<tr>
+<td>Charm++ CI</td>
+<td></td>
+<td>INI-style config files</td>
+</tr>
+<tr>
+<td>Cirru</td>
+<td></td>
+<td>IRC logs (irssi style)</td>
+</tr>
+<tr>
+<td>Clay</td>
+<td></td>
+<td>Isabelle</td>
+</tr>
+<tr>
+<td>Clean</td>
+<td></td>
+<td>JSGF notation</td>
+</tr>
+<tr>
+<td>Clojure</td>
+<td></td>
+<td>JSON, JSON-LD</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td></td>
+<td>Lean theorem prover</td>
+</tr>
+<tr>
+<td>ColdFusion</td>
+<td></td>
+<td>Lighttpd config files</td>
+</tr>
+<tr>
+<td>Common Lisp</td>
+<td></td>
+<td>Linux kernel log (dmesg)</td>
+</tr>
+<tr>
+<td>Component Pascal</td>
+<td></td>
+<td>LLVM assembly</td>
+</tr>
+<tr>
+<td>Coq</td>
+<td></td>
+<td>LSL scripts</td>
+</tr>
+<tr>
+<td>Croc (MiniD)</td>
+<td></td>
+<td>Makefiles</td>
+</tr>
+<tr>
+<td>Cryptol (incl. Literate Cryptol)</td>
+<td></td>
+<td>MoinMoin/Trac Wiki markup</td>
+</tr>
+<tr>
+<td>Crystal</td>
+<td></td>
+<td>MQL</td>
+</tr>
+<tr>
+<td>Cypher</td>
+<td></td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>Cython</td>
+<td></td>
+<td>NCAR command language</td>
+</tr>
+<tr>
+<td>D</td>
+<td></td>
+<td>Nginx config files</td>
+</tr>
+<tr>
+<td>Dart</td>
+<td></td>
+<td>Nix language</td>
+</tr>
+<tr>
+<td>DCPU-16</td>
+<td></td>
+<td>Notmuch</td>
+</tr>
+<tr>
+<td>Delphi</td>
+<td></td>
+<td>NSIS scripts</td>
+</tr>
+<tr>
+<td>Devicetree</td>
+<td></td>
+<td>PEG</td>
+</tr>
+<tr>
+<td>Dylan (incl. console)</td>
+<td></td>
+<td>POV-Ray scenes</td>
+</tr>
+<tr>
+<td>Eiffel</td>
+<td></td>
+<td>PromQL</td>
+</tr>
+<tr>
+<td>Elm</td>
+<td></td>
+<td>Puppet</td>
+</tr>
+<tr>
+<td>Emacs Lisp</td>
+<td></td>
+<td>QML</td>
+</tr>
+<tr>
+<td>Email</td>
+<td></td>
+<td>Ragel</td>
+</tr>
+<tr>
+<td>Erlang (incl. shell sessions)</td>
+<td></td>
+<td>Redcode</td>
+</tr>
+<tr>
+<td>Execline</td>
+<td></td>
+<td>ReST</td>
+</tr>
+<tr>
+<td>Ezhil</td>
+<td></td>
+<td>Roboconf</td>
+</tr>
+<tr>
+<td>F*</td>
+<td></td>
+<td>Robot Framework</td>
+</tr>
+<tr>
+<td>F#</td>
+<td></td>
+<td>RPM spec files</td>
+</tr>
+<tr>
+<td>Factor</td>
+<td></td>
+<td>Rql</td>
+</tr>
+<tr>
+<td>Fancy</td>
+<td></td>
+<td>RSL</td>
+</tr>
+<tr>
+<td>Fantom</td>
+<td></td>
+<td>Scdoc</td>
+</tr>
+<tr>
+<td>Fennel</td>
+<td></td>
+<td>Sieve</td>
+</tr>
+<tr>
+<td>FloScript</td>
+<td></td>
+<td>Singularity</td>
+</tr>
+<tr>
+<td>Fortran</td>
+<td></td>
+<td>SPARQL</td>
+</tr>
+<tr>
+<td>FreeFEM++</td>
+<td></td>
+<td>SQL, also MySQL, SQLite</td>
+</tr>
+<tr>
+<td>GAP</td>
+<td></td>
+<td>Squid configuration</td>
+</tr>
+<tr>
+<td>GDScript</td>
+<td></td>
+<td>TADS 3</td>
+</tr>
+<tr>
+<td>Gherkin (Cucumber)</td>
+<td></td>
+<td>Terraform</td>
+</tr>
+<tr>
+<td>GLSL shaders</td>
+<td></td>
+<td>TeX</td>
+</tr>
+<tr>
+<td>GnuCOBOL (OpenCOBOL)</td>
+<td></td>
+<td>Thrift</td>
+</tr>
+<tr>
+<td>Golo</td>
+<td></td>
+<td>TNT</td>
+</tr>
+<tr>
+<td>Gosu</td>
+<td></td>
+<td>TOML</td>
+</tr>
+<tr>
+<td>Groovy</td>
+<td></td>
+<td>Treetop grammars</td>
+</tr>
+<tr>
+<td>Haskell (incl. Literate Haskell)</td>
+<td></td>
+<td>USD (Universal Scene Description)</td>
+</tr>
+<tr>
+<td>Haxe</td>
+<td></td>
+<td>Varnish configs</td>
+</tr>
+<tr>
+<td>HLSL shaders</td>
+<td></td>
+<td>VGL</td>
+</tr>
+<tr>
+<td>HSpec</td>
+<td></td>
+<td>Vim Script</td>
+</tr>
+<tr>
+<td>Hy</td>
+<td></td>
+<td>WDiff</td>
+</tr>
+<tr>
+<td>IDL</td>
+<td></td>
+<td>Web IDL</td>
+</tr>
+<tr>
+<td>Idris (incl. Literate Idris)</td>
+<td></td>
+<td>Windows batch files</td>
+</tr>
+<tr>
+<td>Igor Pro</td>
+<td></td>
+<td>Windows Registry files</td>
+</tr>
+<tr>
+<td>Io</td>
+<td></td>
+<td>XML</td>
+</tr>
+<tr>
+<td>Jags</td>
+<td></td>
+<td>XSLT</td>
+</tr>
+<tr>
+<td>Jasmin</td>
+<td></td>
+<td>YAML</td>
+</tr>
+<tr>
+<td>Java</td>
+<td></td>
+<td>YANG</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Jcl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Julia</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kotlin</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Lasso (incl. templating)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Limbo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LiveScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LLVM MIR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logtalk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Lua</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mathematica</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Matlab</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MiniScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modelica</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Modula-2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Monkey</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Monte</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MoonScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mosel</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MuPad</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NASM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nemerle</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NesC</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NewLISP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nim</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Notmuch</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NuSMV</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Objective-C</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Objective-J</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>OCaml</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Octave</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Opa</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ParaSail</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pawn</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Perl 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pike</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pointless</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Pony</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PostScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PovRay</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Praat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Prolog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Python 2.x and 3.x (incl. console sessions and tracebacks)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>QBasic</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Racket</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Raku a.k.a. Perl 6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ReasonML</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>REBOL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Red</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Redcode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Rexx</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ride</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ruby (incl. irb sessions)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Rust</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S, S-Plus, R</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Scala</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Scdoc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Scheme</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Scilab</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SGF</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shell scripts (Bash, Tcsh, Fish)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shen</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Silver</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Slash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Slurm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Smalltalk</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SNOBOL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Snowball</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Solidity</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SourcePawn</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Stan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Standard ML</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Stata</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SuperCollider</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Swift</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Swig</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tcl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tera Term language</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TypoScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Unicon</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Urbiscript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>USD</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vala</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>VBScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Verilog, SystemVerilog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>VHDL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Visual Basic.NET</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Visual FoxPro</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Whiley</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>XQuery</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Xtend</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zeek</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zephir</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Zig</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="footnote">
 <hr />
 <ol>
@@ -1137,6 +2238,20 @@ When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
 </ol>
 </div>
                 
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-12-17T00:33:43-06:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-12-17</span>
+      
+    
+  </small>
+</div>
+                  
+                
               
               
                 
@@ -1146,45 +2261,46 @@ When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
             </article>
           </div>
         </div>
+        
       </main>
       
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-          <a href="../using-mkdocs/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <a href="../using-mkdocs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using MkDocs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Using MkDocs
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Using MkDocs
-              </div>
-            </div>
-          </a>
+          </div>
+        </a>
+      
+      
         
-        
-          <a href="../message_boxes/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                MkDocs Message Boxes
-              </div>
+        <a href="../message_boxes/" class="md-footer__link md-footer__link--next" aria-label="Next: MkDocs Message Boxes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              MkDocs Message Boxes
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1194,10 +2310,13 @@ When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
             Copyright &copy; 2019 - Present
           </div>
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
       </div>
       
     </div>
@@ -1205,19 +2324,17 @@ When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
-      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
       
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
       
         <script src="../javascripts/mathjax-config.js"></script>
       
