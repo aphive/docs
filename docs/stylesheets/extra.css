@@ -48,6 +48,26 @@
   display:inline-block;
 }
 
+/* Code Boxes*/
+.md-typeset pre, code {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+.md-typeset code {
+             color: #FF3A6F;
+  background-color: #F5F7F9;
+            border: solid 1px #EEE;
+     border-radius: 3px;
+        overflow-x: auto;
+       white-space: pre;
+       white-space: pre-wrap;
+       white-space: -moz-pre-wrap;
+       white-space: -o-pre-wrap;
+}
+
 /* Table */
 .md-typeset__table,.md-typeset table:not([class]) {display:table!important;min-width: 100%;}
 .md-typeset table:not([class]) th {background-color: #232f34;color: #ffde03;font-weight: 400;font-size: .8rem !important;text-align: center !important;vertical-align: middle;text-transform: uppercase;}

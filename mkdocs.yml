@@ -17,6 +17,10 @@ nav:
   - Using SSH Keys: using_ssh_keys.md
   - Using pfSense: using_pfsense.md
   - Upgrade Bash on Mac: upgrade_bash_on_mac.md
+  - Apt Sources:
+    - Apt: apt.md
+    - Debian Sources: debian_sources.md
+    - Ubuntu Sources: ubuntu_sources.md
   - MkDocs:
     - Using MkDocs: using-mkdocs.md
     - MkDocs Reference: mkdocs_reference.md
@@ -27,8 +31,8 @@ theme:
   logo: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
   favicon: 'https://raw.githubusercontent.com/aphive/images/master/ahive-logo.svg'
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: 'IBM Plex Sans'
+    code: 'IBM Plex Mono'
   name: 'material'
   palette:
     primary: 'white'
@@ -41,18 +45,36 @@ extra_javascript:
   - javascripts/mathjax-config.js
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-# Extensions
+# Plugins and Extensions
+plugins:
+  - search
+  - autolinks
+  # DO NOT Enable Tags, this is an upcoming feature that I am prepping for. It will break things if you do.
+  #- tags:
+  #    tags_file: tags.md
+  - git-revision-date-localized:
+      type: timeago
+      locale: en
+      fallback_to_build_date: true
+      exclude:
+        - index.md
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.abbr
-  - markdown.extensions.attr_list
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
-      permalink: true
+  - codehilite:
+      guess_lang: true
+      use_pygments: true
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: false
+      toc_depth: 4
+  - fontawesome_markdown
   - markdown_include.include:
-      base_path: docs
+      base_path: .
+  - meta
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -72,6 +94,7 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.pathconverter
+  - pymdownx.saneheaders
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       base_path: .
@@ -81,6 +104,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
